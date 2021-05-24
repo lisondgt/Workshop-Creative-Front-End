@@ -3,22 +3,39 @@
 
 /* GENERAL -------------------------------------------------*/
 body {
+  margin: 0;
   font-family: 'Oxygen';
   color: $primary-shade;
+  font-size: $font-size-base;
+  background-color: $secondary-shade;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ornement {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid $primary-shade;
 }
 
 /* UTILS -------------------------------------------------*/
+.large-container {
+  padding: 0 20px;
+}
 
 /* TITRES -------------------------------------------------*/
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
-  //font-family: 'Alvaro';
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 h1, .h1 {
   font-family: 'Alvaro';
   font-size: $h1-font-size-h1;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -40,9 +57,39 @@ h3, .h3 {
   font-weight: 700;
 }
 
-/* TEXTE -------------------------------------------------*/
+/* ICONS -------------------------------------------------*/
+.icon-panier {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/pictos/panier.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 20px;
+}
 
-/* BACKGROUND -------------------------------------------------*/
+/* TEXTE -------------------------------------------------*/
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* LINK -------------------------------------------------*/
+a {
+  color: $primary-shade;
+  text-decoration: underline;
+
+  &:hover {
+    font-weight: $font-bold;
+  }
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
 
 /* BOUTONS -------------------------------------------------*/
 button, [type="button"], [type="reset"], [type="submit"] {
@@ -109,6 +156,115 @@ button:focus {
       border-color: $primary-shade;
       background-color: transparent;
       color: $primary-shade;
+    }
+  }
+}
+
+/* HEADER -------------------------------------------------*/
+header {
+  padding: 1rem 0;
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+
+      .nav-link {
+        display: block;
+        padding: .5rem 1rem;
+        color: $primary-shade;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+        &.link-panier {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+/* HERO -------------------------------------------------*/
+.hero {
+  position: relative;
+
+  .img-header {
+    width: 100%;
+  }
+
+  .text-container {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 450px;
+    text-align: center;
+    color: $secondary-shade;
+
+    h1 {
+      margin: 2rem 0;
+    }
+
+    .scroll-down {
+      color: $secondary-shade;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -4rem;
+      transform: translate(-50%, 0);
+      width: 1px;
+      height: 3rem;
+      background-color: $secondary-shade;
+    }
+  }
+}
+
+/* INTRODUCTION -------------------------------------------------*/
+.introduction {
+  position: relative;
+  margin-top: 80px;
+  border-top: 1px solid $primary-shade;
+  padding: 4rem 0;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -85px;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 85px;
+    background-color: $primary-shade;
+  }
+
+  .text-container {
+    margin-left: 300px;
+  }
+
+  .image-container {
+    margin-top: 4rem;
+    img {
+      width: 100%;
     }
   }
 }
