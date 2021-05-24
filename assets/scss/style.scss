@@ -12,11 +12,20 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.ornement {
+.ornement-left {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -1;
   border-right: 1px solid $primary-shade;
+}
+
+.ornement-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  border-left: 1px solid $primary-shade;
 }
 
 /* UTILS -------------------------------------------------*/
@@ -245,7 +254,7 @@ header {
   position: relative;
   margin-top: 80px;
   border-top: 1px solid $primary-shade;
-  padding: 4rem 0;
+  padding: 4rem 0 3rem 0;
   &:before {
     content: '';
     position: absolute;
