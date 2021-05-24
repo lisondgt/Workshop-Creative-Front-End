@@ -1,0 +1,38 @@
+/* VARIABLES */
+
+// Breakpoints
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+) !default;
+
+// Colors
+$primary-shade: #2C2C2C;
+$primary-light: lighten($primary-shade, 37%);
+$primary-dark: darken($primary-shade, 12%);
+$secondary-shade: #FFFDFB;
+$secondary-light: lighten($secondary-shade, 37%);
+$secondary-dark: darken($secondary-shade, 12%);
+
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$white: #FFF;
+$cyan: #17a2b8;
+$lightgrey: #F7F7F7;
+$gray-100: #f8f9fa !default;
+$gray-800: #343a40 !default;
+$gray-900: #CDCDCD;
+$gray-lighter: #DDD;
+
+// Links
+//
+// Style anchor elements.
+$link-color: $primary-shade;
+$link-hover-color: $primary-shade;

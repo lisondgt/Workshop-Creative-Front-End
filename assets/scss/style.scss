@@ -2,11 +2,113 @@
 @import "import";
 
 /* GENERAL -------------------------------------------------*/
+body {
+  font-family: 'Oxygen';
+  color: $primary-shade;
+}
 
 /* UTILS -------------------------------------------------*/
 
 /* TITRES -------------------------------------------------*/
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  //font-family: 'Alvaro';
+}
+
+h1, .h1 {
+  font-family: 'Alvaro';
+  font-size: $h1-font-size-h1;
+  font-weight: normal;
+}
+
+h2, .h2 {
+  font-family: 'Alvaro';
+  font-size: $h2-font-size-h2;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h3, .h3 {
+  font-family: 'Oxygen';
+  font-size: $h3-font-size-h3;
+  font-weight: 700;
+}
+
+.subtitle-h1 {
+  font-family: 'Alvaro';
+  font-size: $h3-font-size-h3;
+  font-weight: 700;
+}
+
+/* TEXTE -------------------------------------------------*/
 
 /* BACKGROUND -------------------------------------------------*/
 
 /* BOUTONS -------------------------------------------------*/
+button, [type="button"], [type="reset"], [type="submit"] {
+  font-family: 'Oxygen';
+  border: 1px solid $primary-shade;
+  color: $primary-shade;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  font-family: 'Oxygen';
+  border: 1px solid $primary-shade;
+  color: $primary-shade;
+  background-color: transparent;
+}
+
+.btn, input[type="submit"] {
+  font-family: 'Oxygen';
+  display: flex;
+  align-items: baseline;
+  width: fit-content;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primary-shade;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 16px;
+  transition: all .15s ease-in-out;
+
+  &:after {
+    content: '';
+    background-image: url("../img/pictos/arrow-right.svg");
+    display: flex;
+    width: 8px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+  }
+
+  &.btn-primary,
+  &.btn-primary:not(:disabled) {
+    color: $primary-shade;
+    background-color: transparent;
+    border-color: $primary-shade;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $primary-shade;
+      background-color: transparent;
+      color: $primary-shade;
+    }
+  }
+}

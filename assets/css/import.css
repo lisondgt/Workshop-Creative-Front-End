@@ -1,4 +1,25 @@
 /* IMPORTS */
+/* VARIABLES */
+/* TYPOGRAPHY */
+@font-face {
+  font-family: 'Alavaro';
+  src: url("../fonts/Alvaro/AlvaroCondensed-8XZZ.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Bold.ttf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Light.ttf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Regular.ttf");
+  font-weight: 400; }
+
 .container,
 .container-fluid,
 .container-xxl,

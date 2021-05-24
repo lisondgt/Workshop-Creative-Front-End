@@ -1,4 +1,25 @@
 /* IMPORTS */
+/* VARIABLES */
+/* TYPOGRAPHY */
+@font-face {
+  font-family: 'Alavaro';
+  src: url("../fonts/Alvaro/AlvaroCondensed-8XZZ.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Bold.ttf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Light.ttf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url("../fonts/Oxygen/Oxygen-Regular.ttf");
+  font-weight: 400; }
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -2018,7 +2039,87 @@
 
 /*# sourceMappingURL=bootstrap-grid.css.map */
 /* GENERAL -------------------------------------------------*/
+body {
+  font-family: 'Oxygen';
+  color: #2C2C2C; }
+
 /* UTILS -------------------------------------------------*/
 /* TITRES -------------------------------------------------*/
+h1, .h1 {
+  font-family: 'Alvaro';
+  font-size: 70px;
+  font-weight: normal; }
+
+h2, .h2 {
+  font-family: 'Alvaro';
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: normal; }
+
+h3, .h3 {
+  font-family: 'Oxygen';
+  font-size: 15px;
+  font-weight: 700; }
+
+.subtitle-h1 {
+  font-family: 'Alvaro';
+  font-size: 15px;
+  font-weight: 700; }
+
+/* TEXTE -------------------------------------------------*/
 /* BACKGROUND -------------------------------------------------*/
 /* BOUTONS -------------------------------------------------*/
+button, [type="button"], [type="reset"], [type="submit"] {
+  font-family: 'Oxygen';
+  border: 1px solid #2C2C2C;
+  color: #2C2C2C;
+  background-color: transparent; }
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important; }
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  font-family: 'Oxygen';
+  border: 1px solid #2C2C2C;
+  color: #2C2C2C;
+  background-color: transparent; }
+
+.btn, input[type="submit"] {
+  font-family: 'Oxygen';
+  display: flex;
+  align-items: baseline;
+  width: fit-content;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #2C2C2C;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 16px;
+  transition: all .15s ease-in-out; }
+  .btn:after, input[type="submit"]:after {
+    content: '';
+    background-image: url("../img/pictos/arrow-right.svg");
+    display: flex;
+    width: 8px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px; }
+  .btn.btn-primary, .btn.btn-primary:not(:disabled), input[type="submit"].btn-primary, input[type="submit"].btn-primary:not(:disabled) {
+    color: #2C2C2C;
+    background-color: transparent;
+    border-color: #2C2C2C; }
+    .btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:not(:disabled):hover, .btn.btn-primary:not(:disabled):focus, .btn.btn-primary:not(:disabled):active, input[type="submit"].btn-primary:hover, input[type="submit"].btn-primary:focus, input[type="submit"].btn-primary:active, input[type="submit"].btn-primary:not(:disabled):hover, input[type="submit"].btn-primary:not(:disabled):focus, input[type="submit"].btn-primary:not(:disabled):active {
+      border-color: #2C2C2C;
+      background-color: transparent;
+      color: #2C2C2C; }
