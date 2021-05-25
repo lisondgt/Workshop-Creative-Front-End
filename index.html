@@ -6,26 +6,33 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>J/WS</title>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <header>
-    <div class="nav-container large-container">
-        <nav class="nav nav-left">
-            <a class="nav-link" href="#">Prestations</a>
-            <a class="nav-link" href="#">Services</a>
-            <a class="nav-link" href="#">Accesoire</a>
-        </nav>
+    <div class="large-container">
+        <div class="nav-container">
+            <div class="navbar-brand">
+                <img src="assets/img/logo/logo-JWS.svg" alt="logo JWS"/>
+            </div>
 
-        <div class="navbar-brand">
-            <img src="assets/img/logo/logo-JWS.svg" alt="logo JWS"/>
+            <div class="navbar">
+                <nav class="nav nav-left">
+                    <a class="nav-link" href="#prestations">Prestations</a>
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#accesoire">Accesoire</a>
+                </nav>
+                <nav class="nav nav-right">
+                    <a class="nav-link" href="#">Rechercher</a>
+                    <a class="nav-link" href="#">Profil</a>
+                    <a class="nav-link link-panier" href="#"><span class="icon-panier me-2"></span> Panier</a>
+                </nav>
+            </div>
+
+            <span class="toggle-navbar"></span>
         </div>
-
-        <nav class="nav nav-right">
-            <a class="nav-link" href="#">Rechercher</a>
-            <a class="nav-link" href="#">Profil</a>
-            <a class="nav-link link-panier" href="#"><span class="icon-panier me-2"></span> Panier</a>
-        </nav>
     </div>
 </header>
 
@@ -34,11 +41,11 @@
     <div class="text-container">
         <img src="assets/img/logo/logo-JWS-white.svg" alt="logo JWS"/>
         <h1>Le professionnalisme au quotidien</h1>
-        <a href="#" class="scroll-down">scroll down</a>
+        <a href="#introduction" class="scroll-down">scroll down</a>
     </div>
 </section>
 
-<section class="introduction">
+<section id="introduction" class="introduction anchor">
     <div class="ornement-left">
         <img src="assets/img/elements/intro-ornement.svg">
     </div>
@@ -47,19 +54,23 @@
             <div class="col-6">
                 <h2>Tout pour la barbe</h2>
                 <p>
-                    Pour prendre soin de sa barbe jour après jour, il faut se munir d’accessoires de qualité, qui allient
+                    Pour prendre soin de sa barbe jour après jour, il faut se munir d’accessoires de qualité, qui
+                    allient
                     durabilité, maniabilité, et finesse de design.
                 </p>
                 <p>
-                    Nous avons décidé de créer une gamme de produits qui s’adaptent aux besoins de l’homme de demain, et qui lui
+                    Nous avons décidé de créer une gamme de produits qui s’adaptent aux besoins de l’homme de demain, et
+                    qui lui
                     permette d’effectuer un rasage parfait et distingué.
                 </p>
                 <p>
-                    La simplicité de notre rasoir s’allie à son design sophistiqué pour être à la hauteur de vos espérances, ,
+                    La simplicité de notre rasoir s’allie à son design sophistiqué pour être à la hauteur de vos
+                    espérances, ,
                     et nos produits de rasage sont pensés pour vivifier votre peau et votre poil.
                 </p>
                 <p>
-                    Plus qu’une simple lame, c’est un réel outil de professionnel qui vous accompagnera au quotidien pour
+                    Plus qu’une simple lame, c’est un réel outil de professionnel qui vous accompagnera au quotidien
+                    pour
                     dénicher le gentleman en vous.
                 </p>
                 <a href="/" class="btn btn-primary mt-5">Commandez votre Pack Rasoir</a>
@@ -67,8 +78,229 @@
         </div>
     </div>
     <div class="large-container image-container">
-        <img src="assets/img/photos/tout-pour-la-barbe.jpg" />
+        <img src="assets/img/photos/tout-pour-la-barbe.jpg"/>
     </div>
 </section>
+
+<section id="prestations" class="produits anchor">
+    <div class="ornement-right">
+        <img src="assets/img/elements/main-product-ornement.svg">
+    </div>
+    <div class="container-fluid text-container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h2>Lames d’excellence</h2>
+                <p>
+                    Votre peau mérite le meilleur, alors nous avons créé notre gamme de rasoirs avec soin. Grâce aux
+                    conseils des meilleurs experts barbiers, nous avons confectionné un rasoir d’excellence, dans le
+                    respect du savoir-faire traditionnel.
+                </p>
+                <p>
+                    Nos lames sont forgées par des artisans expérimentés qui prennent à coeur la qualité de leur
+                    travail. Grâce à leurs techniques qui lient tradition et modernité, ils créent des produits uniques
+                    et durables, spécialement pour votre salle de bain.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-slick-slider">
+        <div class="slick-left"></div>
+        <div class="slick-slider">
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/coupe-choux-thiers-issard.png">
+                    <div class="text-container">
+                        <h3>Coupe choux Thiers Issard Le Chatellerault 1800</h3>
+                        <p class="h3 price">125€</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/coupe-choux-thiers-marbre.png">
+                    <div class="text-container">
+                        <h3>Coupe choux Thiers Marbre Sing-58</h3>
+                        <p class="h3 price">135€</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/rasoir-coupe-choux-thiers-le-dandy.png">
+                    <div class="text-container">
+                        <h3>Rasoir coupe choux Thiers Le Dandy</h3>
+                        <p class="h3 price">125€</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/coupe-choux-thiers-issard.png">
+                    <div class="text-container">
+                        <h3>Coupe choux Thiers Issard Le Chatellerault 1800</h3>
+                        <p class="h3 price">125€</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/coupe-choux-thiers-marbre.png">
+                    <div class="text-container">
+                        <h3>Coupe choux Thiers Marbre Sing-58</h3>
+                        <p class="h3 price">135€</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-grey">
+                    <img src="assets/img/photos/rasoir-coupe-choux-thiers-le-dandy.png">
+                    <div class="text-container">
+                        <h3>Rasoir coupe choux Thiers Le Dandy</h3>
+                        <p class="h3 price">125€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slick-right"></div>
+    </div>
+</section>
+
+<section id="services" class="tout-compris anchor">
+    <div class="ornement-left">
+        <img src="assets/img/elements/secondary-product-ornement.svg">
+    </div>
+    <img src="assets/img/photos/schema-rasoir.png" class="schema">
+    <div class="text-container">
+        <div class="container-fluid text-container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <h2>Tout compris</h2>
+                    <p>
+                        Chaque rasoir est accompagné d’un produit de rasage adapté, respectueux pour votre peau comme
+                        pour votre lame.
+                    </p>
+                    <p>
+                        Inspirés par des siècles de tradition de rasage, nous avons conçu pour votre peau des produits
+                        de grande qualité, aux propriétés hydratantes et apaisantes.
+                    </p>
+                    <a href="/" class="btn btn-primary mt-5">Parcourez notre gamme cosmétique</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="accesoire" class="le-meilleur anchor">
+    <div class="ornement-right">
+        <img src="assets/img/elements/le-meilleur.svg">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="block-container block-1">
+                    <img src="assets/img/elements/coq.svg">
+                    <div class="text-container">
+                        <h2>01</h2>
+                        <h3>Fabrication intégralement française</h3>
+                        <p>De la lame au manche, tous nos rasoirs sont fabriqués en France, avec des matériaux
+                            d’exception,
+                            traités avec soin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="block-container block-2">
+                    <img src="assets/img/elements/enclume.svg">
+                    <div class="text-container">
+                        <h2>02</h2>
+                        <h3>Lames forgées dans la tradition de la coutellerie</h3>
+                        <p>Nos lames sont toutes faites mains, par des artisans coutelliers expérimentés de la Maison de
+                            la
+                            Coutellerie à Thiers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="block-container block-3">
+                    <img src="assets/img/elements/laurier.svg">
+                    <div class="text-container">
+                        <h2>03</h2>
+                        <h3>Satisfaction garantie</h3>
+                        <p>Parce que nous sommes fiers de nos produits, nous tenons à ce que vous le soyez aussi. Si
+                            l’excellence ne vous satisfait pas, votre commande est remboursée.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map">
+    <div class="ornement-left">
+        <img src="assets/img/elements/store-locator-ornement.svg">
+    </div>
+    <div class="large-container">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6">
+                <img src="assets/img/photos/carte.jpg" class="carte" alt="carte">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h2>Nos établissements</h2>
+                <p>
+                    Passez un moment chez nos barbiers et savourez un instant de détente dans un salon haut standing.
+                </p>
+                <p>
+                    Nos barbiers sont également présents pour vous conseiller dans l’achat de votre Pack Rasoir et toute
+                    notre gamme de produits.
+                </p>
+                <a href="/" class="btn btn-primary mt-5">Découvrez nos établissements</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="flex-row">
+            <div class="col-flex col-logo">
+                <img src="assets/img/logo/logo-JWS.svg" alt="logo JWS"/>
+            </div>
+            <div class="col-flex">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="col-flex">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Mon compte</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                </ul>
+            </div>
+            <div class="col-flex">
+                <h4>Mentions légales</h4>
+                <ul>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Contrat</a></li>
+                    <li><a href="#">Ressources</a></li>
+                    <li><a href="#">Aide & support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"
+        integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/slick/slick.min.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
