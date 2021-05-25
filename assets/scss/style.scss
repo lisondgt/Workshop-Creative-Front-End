@@ -17,19 +17,27 @@ body {
 }
 
 .ornement-left {
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
   border-right: 1px solid $primary-shade;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 }
 
 .ornement-right {
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;
   z-index: -1;
   border-left: 1px solid $primary-shade;
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 }
 
 /* UTILS -------------------------------------------------*/
@@ -61,6 +69,10 @@ body {
       height: 17px;
       display: flex;
     }
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
   }
 
   .slick-right {
@@ -80,7 +92,19 @@ body {
       display: flex;
       transform: scaleX(-1);
     }
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
   }
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  height: auto;
 }
 
 .slick-dots {
@@ -393,7 +417,7 @@ header {
         flex-direction: column;
         z-index: 1;
         justify-content: center;
-        top: 0;
+        top: -20px;
         right: 0;
         clip-path: circle(50px at 90% -20%);
         -webkit-clip-path: circle(50px at 90% -10%);
@@ -403,6 +427,7 @@ header {
           clip-path: circle(1000px at 90% -10%);
           -webkit-clip-path: circle(1000px at 90% -10%);
           pointer-events: all;
+          top: 0;
         }
         .nav {
           flex-direction: column;
@@ -435,6 +460,10 @@ header {
 
   .img-header {
     width: 100%;
+    @media screen and (max-width: 800px) {
+      min-height: 400px;
+      object-fit: cover;
+    }
   }
 
   .text-container {
@@ -445,9 +474,23 @@ header {
     max-width: 450px;
     text-align: center;
     color: $secondary-shade;
+    padding: 0 20px;
+
+    @media screen and (max-width: 800px) {
+      width: 90%;
+      max-width: 90%;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 80%;
+      max-width: 80%;
+    }
 
     h1 {
       margin: 2rem 0;
+      @media screen and (max-width: 800px) {
+        font-size: 60px;
+      }
     }
 
     .scroll-down {
@@ -478,8 +521,13 @@ header {
   margin-top: 80px;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
-  height: calc(1111px - 4rem);
-  overflow: hidden;
+  padding-bottom: 3rem;
+  min-height: calc(1111px - 4rem);
+
+  @media screen and (max-width: 992px) {
+    min-height: auto;
+    height: auto;
+  }
 
   &:before {
     content: '';
@@ -494,6 +542,9 @@ header {
 
   .text-container {
     margin-left: 300px;
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
   }
 
   .image-container {
@@ -510,22 +561,44 @@ header {
   position: relative;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
-  height: calc(828px - 4rem);
-  overflow: hidden;
+  padding-bottom: 3rem;
+  min-height: calc(828px - 4rem);
+  @media screen and (max-width: 992px) {
+    min-height: auto;
+    height: auto;
+  }
 
   .container-slick-slider {
-    width: 100%;
-    margin-left: 250px;
     margin-top: 4rem;
-    //overflow: hidden;
+    overflow: hidden;
+    .sous-container-slider {
+      width: 100%;
+      margin-left: 250px;
+      position: relative;
+
+      @media screen and (max-width: 992px) {
+        margin-left: 0;
+      }
+    }
+
+    .slick-slider {
+      margin-bottom: 50px;
+      .slick-dots {
+        bottom: -50px;
+      }
+    }
+
     .bg-grey {
       background-color: $bg-grey;
       margin: 1rem;
       padding: 2rem;
+      height: 100%;
 
       img {
         height: 200px;
         width: auto;
+        max-width: 100%;
+        object-fit: cover;
         display: flex;
         margin: auto;
       }
@@ -554,16 +627,38 @@ header {
   position: relative;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
-  height: calc(927px - 4rem);
-  overflow: hidden;
+  padding-bottom: 3rem;
+  min-height: calc(927px - 4rem);
+  @media screen and (max-width: 992px) {
+    min-height: auto;
+    height: auto;
+  }
 
-  img.schema {
+  .container-img-schema {
     display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
+    img.schema {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 1200px) {
+      margin-left: 200px;
+      margin-right: 15px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-left: 15px;
+    }
   }
 
   .text-container {
     margin-top: 4rem;
+    @media screen and (max-width: 1200px) {
+      margin-left: 100px;
+    }
+    @media screen and (max-width: 992px) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -572,15 +667,18 @@ header {
   position: relative;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
-  height: calc(613px - 4rem);
-  overflow: hidden;
+  padding-bottom: 3rem;
+  min-height: calc(613px - 4rem);
+  @media screen and (max-width: 992px) {
+    min-height: auto;
+    height: auto;
+  }
 
   .block-container {
     position: relative;
     background-color: $secondary-shade;
     border: 1px solid $primary-shade;
     padding: 2rem;
-    //height: 100%;
     .text-container {
       h2 {
         font-size: 100px;
@@ -606,6 +704,9 @@ header {
 
     &.block-2 {
       margin-top: 4rem;
+      @media screen and (max-width: 992px) {
+        margin-top: 5rem;
+      }
 
       img {
         position: absolute;
@@ -620,6 +721,9 @@ header {
 
     &.block-3 {
       margin-top: 8rem;
+      @media screen and (max-width: 992px) {
+        margin-top: 5rem;
+      }
 
       img {
         position: absolute;
@@ -640,8 +744,12 @@ header {
   position: relative;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
-  height: calc(706px - 4rem);
-  overflow: hidden;
+  padding-bottom: 3rem;
+  min-height: calc(706px - 4rem);
+  @media screen and (max-width: 992px) {
+    min-height: auto;
+    height: auto;
+  }
 
   .row {
     img {
@@ -685,6 +793,25 @@ footer {
             font-weight: $font-regular;
             text-decoration: underline;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .flex-row {
+      flex-direction: column;
+      align-items: center;
+      .col-flex {
+        flex: 0 0 100%;
+        margin: 1rem;
+        text-align: center;
+
+        &.col-logo {
+          flex: 0 0 100%;
+          margin: 1rem auto;
         }
       }
     }
