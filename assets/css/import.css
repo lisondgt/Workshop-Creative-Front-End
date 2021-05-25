@@ -2038,3 +2038,37 @@
     display: none !important; } }
 
 /*# sourceMappingURL=bootstrap-grid.css.map */
+/* HERO -------------------------------------------------*/
+.hero .container-animation {
+  overflow: hidden; }
+  .hero .container-animation img.img-header, .hero .container-animation h1 {
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .8s ease-out;
+    -o-transition: all .8s ease-out;
+    transition: all .8s ease-out; }
+
+.hero:hover .container-animation img.img-header {
+  transform: scale(1.1); }
+
+.hero:hover .container-animation h1 {
+  transform: scale(0.9); }
+
+.animation-scroll.title-animation {
+  position: relative;
+  z-index: -1; }
+  .animation-scroll.title-animation:before {
+    position: absolute;
+    content: '';
+    background-color: #FFFDFB;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    transition: all 2s ease-out; }
+
+.animation-scroll:hover.title-animation:before {
+  top: -100%; }
+
+.animation-scroll.animated.title-animation:before {
+  top: -100%; }
