@@ -2053,22 +2053,81 @@
 .hero:hover .container-animation h1 {
   transform: scale(0.9); }
 
-.animation-scroll.title-animation {
-  position: relative;
-  z-index: -1; }
-  .animation-scroll.title-animation:before {
-    position: absolute;
-    content: '';
-    background-color: #FFFDFB;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    transition: all 2s ease-out; }
-
-.animation-scroll:hover.title-animation:before {
-  top: -100%; }
-
-.animation-scroll.animated.title-animation:before {
-  top: -100%; }
+.section-animate {
+  overflow: hidden; }
+  .section-animate .ornement-animation {
+    overflow: hidden; }
+    .section-animate .ornement-animation img {
+      transform: translate(0, 100%);
+      transition: all .5s ease-out; }
+  .section-animate .title-animation {
+    position: relative;
+    overflow: hidden; }
+    .section-animate .title-animation h2 {
+      transform: translate(0, 100%);
+      transition: all 1s ease-out .4s; }
+  .section-animate .text-animation {
+    opacity: 0;
+    transition: all 0.7s ease-out 1s; }
+  .section-animate .img-animation {
+    position: relative; }
+    .section-animate .img-animation:before {
+      position: absolute;
+      content: '';
+      background-color: #2C2C2C;
+      width: calc(100% - 40px);
+      height: 100%;
+      opacity: 1;
+      transition: all 0.7s ease-out 1.3s; }
+  .section-animate .slider-animation .sous-container-slider {
+    transform: translate(100%, 0);
+    transition: all .5s ease-out 1.3s; }
+    .section-animate .slider-animation .sous-container-slider .slick-dots {
+      opacity: 0;
+      transition: all .5s ease-out 2s; }
+  .section-animate .schema-animation img.schema {
+    transform: translate(0, -110%);
+    transition: all .5s ease-out; }
+  .section-animate .schema-animation .legend {
+    opacity: 0; }
+    .section-animate .schema-animation .legend.nez {
+      transition: all .5s ease-out 1.2s; }
+    .section-animate .schema-animation .legend.dos {
+      transition: all .5s ease-out 1.4s; }
+    .section-animate .schema-animation .legend.talon {
+      transition: all .5s ease-out 1.8s; }
+    .section-animate .schema-animation .legend.pivot {
+      transition: all .5s ease-out 2.2s; }
+    .section-animate .schema-animation .legend.crochet {
+      transition: all .5s ease-out 2.4s; }
+    .section-animate .schema-animation .legend.clou-de-fixation {
+      transition: all .5s ease-out 2.8s; }
+    .section-animate .schema-animation .legend.manche {
+      transition: all .5s ease-out 3.2s; }
+  .section-animate .col-animation .block-container.block-1 {
+    transition: all 1s ease-out;
+    transform: translate(0, -120%); }
+  .section-animate .col-animation .block-container.block-2 {
+    transition: all 1s ease-out 1s;
+    transform: translate(0, -143%); }
+  .section-animate .col-animation .block-container.block-3 {
+    transition: all 1s ease-out 2s;
+    transform: translate(0, -158%); }
+  .section-animate.animated .ornement-animation img {
+    transform: translate(0); }
+  .section-animate.animated .title-animation h2 {
+    transform: translate(0); }
+  .section-animate.animated .text-animation {
+    opacity: 1; }
+  .section-animate.animated .img-animation:before {
+    opacity: 0; }
+  .section-animate.animated .slider-animation .sous-container-slider {
+    transform: translate(0); }
+    .section-animate.animated .slider-animation .sous-container-slider .slick-dots {
+      opacity: 1; }
+  .section-animate.animated .schema-animation img.schema {
+    transform: translate(0); }
+  .section-animate.animated .schema-animation .legend {
+    opacity: 1; }
+  .section-animate.animated .col-animation .block-container {
+    transform: translate(0); }

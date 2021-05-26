@@ -638,15 +638,327 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin-left: auto;
+    width: calc(100% - 156px);
+    .legend-img {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .legend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.legend-left {
+          &:before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-color: $primary-shade;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+          }
+          &:after {
+            content: '';
+            width: 155px;
+            height: 1px;
+            background-color: $primary-shade;
+            margin-left: 10px;
+          }
+        }
+        &.legend-right {
+          &:before {
+            content: '';
+            width: 155px;
+            height: 1px;
+            background-color: $primary-shade;
+            margin-right: 10px;
+          }
+          &:after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-color: $primary-shade;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+          }
+        }
+
+        @media screen and (max-width: 732px) {
+          font-size: 13px;
+          &.legend-left {
+            &:after {
+              width: 100px;
+            }
+          }
+          &.legend-right {
+            &:before {
+              width: 100px;
+            }
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          font-size: 12px;
+          &.legend-left {
+            &:before {
+              width: 5px;
+              height: 5px;
+            }
+            &:after {
+              width: 80px;
+              margin-left: 5px;
+            }
+          }
+          &.legend-right {
+            &:before {
+              width: 80px;
+              margin-right: 5px;
+            }
+            &:after {
+              width: 5px;
+              height: 5px;
+            }
+          }
+        }
+        @media screen and (max-width: 642px) {
+          font-size: 10px;
+          &.legend-left {
+            &:after {
+              width: 40px;
+            }
+          }
+          &.legend-right {
+            &:before {
+              width: 40px;
+            }
+          }
+        }
+        @media screen and (max-width: 455px) {
+          font-size: 8px;
+          &.legend-left {
+            &:before {
+              width: 3px;
+              height: 3px;
+            }
+            &:after {
+              width: 20px;
+            }
+          }
+          &.legend-right {
+            &:before {
+              width: 20px;
+            }
+            &:after {
+              width: 3px;
+              height: 3px;
+            }
+          }
+        }
+      }
+
+      .nez {
+        position: absolute;
+        top: 30px;
+        left: -120px;
+        @media screen and (max-width: 1200px) {
+          top: 15px;
+          left: -65px;
+        }
+        @media screen and (max-width: 992px) {
+          top: 7px;
+          left: -85px;
+        }
+        @media screen and (max-width: 732px) {
+          left: -80px;
+          top: 10px;
+        }
+        @media screen and (max-width: 642px) {
+          top: 7px;
+          left: -45px;
+        }
+        @media screen and (max-width: 455px) {
+          top: 5px;
+          left: -20px;
+        }
+      }
+    }
+
+    .talon {
+      position: absolute;
+      top: 210px;
+      left: 35px;
+      @media screen and (max-width: 1200px) {
+        top: 135px;
+        left: 25px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 90px;
+        left: -20px;
+      }
+      @media screen and (max-width: 732px) {
+        left: -20px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 70px;
+        left: 0px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 55px;
+        left: 15px;
+      }
+    }
+
+    .clou-de-fixation {
+      position: absolute;
+      top: 342px;
+      left: -260px;
+      @media screen and (max-width: 1200px) {
+        top: 225px;
+        left: -175px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 147px;
+      }
+      @media screen and (max-width: 732px) {
+        left: -175px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 118px;
+        left: -120px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 88px;
+        left: -85px;
+      }
+    }
+
+    .manche {
+      position: absolute;
+      top: 375px;
+      left: -208px;
+      @media screen and (max-width: 1200px) {
+        top: 250px;
+        left: -134px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 162px;
+        left: -134px;
+      }
+      @media screen and (max-width: 732px) {
+        left: -134px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 131px;
+        left: -86px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 97px;
+        left: -57px;
+      }
+    }
+
+    .dos {
+      position: absolute;
+      top: 60px;
+      right: 70px;
+      @media screen and (max-width: 1200px) {
+        top: 30px;
+        right: 75px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 20px;
+        right: 10px;
+      }
+      @media screen and (max-width: 732px) {
+        right: 10px;
+        top: 20px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 15px;
+        right: 30px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 10px;
+        right: 35px;
+      }
+    }
+
+    .pivot {
+      position: absolute;
+      top: 265px;
+      right: -155px;
+      @media screen and (max-width: 1200px) {
+        top: 170px;
+        right: -80px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 110px;
+        right: -90px;
+      }
+      @media screen and (max-width: 732px) {
+        top: 110px;
+        right: -95px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 90px;
+        right: -55px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 65px;
+        right: -35px;
+      }
+    }
+
+    .crochet {
+      position: absolute;
+      top: 305px;
+      right: -185px;
+      @media screen and (max-width: 1200px) {
+        top: 200px;
+        right: -105px;
+      }
+      @media screen and (max-width: 992px) {
+        top: 130px;
+        right: -120px;
+      }
+      @media screen and (max-width: 732px) {
+        top: 130px;
+        right: -120px;
+      }
+      @media screen and (max-width: 642px) {
+        top: 102px;
+        right: -75px;
+      }
+      @media screen and (max-width: 455px) {
+        top: 75px;
+        right: -50px;
+      }
+    }
+
     img.schema {
       max-width: 100%;
+      @media screen and (max-width: 1200px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 992px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 642px) {
+        width: 160px;
+      }
+      @media screen and (max-width: 455px) {
+        width: 120px;
+      }
     }
     @media screen and (max-width: 1200px) {
-      margin-left: 200px;
+      width: calc(100% - 186px);
       margin-right: 15px;
     }
     @media screen and (max-width: 992px) {
+      width: calc(100% - 30px);
       margin-left: 15px;
     }
   }
@@ -790,6 +1102,7 @@ footer {
           text-decoration: none;
 
           &:hover {
+            color: black;
             font-weight: $font-regular;
             text-decoration: underline;
           }
