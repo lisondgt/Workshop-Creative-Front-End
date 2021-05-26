@@ -2185,7 +2185,7 @@ body {
     cursor: pointer; }
     .container-slick-slider .slick-left:after {
       content: '';
-      background-image: url("../img/pictos/arrow.svg");
+      background-image: url("../image/pictos/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 42px;
@@ -2202,7 +2202,7 @@ body {
     cursor: pointer; }
     .container-slick-slider .slick-right:after {
       content: '';
-      background-image: url("../img/pictos/arrow.svg");
+      background-image: url("../image/pictos/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 42px;
@@ -2299,7 +2299,7 @@ h4, .h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/pictos/panier.svg");
+  background-image: url("../image/pictos/panier.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 18px;
@@ -2366,10 +2366,10 @@ button:focus {
     color: #FFFDFB;
     background-position: left bottom; }
     .btn:hover:after, input[type="submit"]:hover:after {
-      background-image: url("../img/pictos/arrow-right-white.svg"); }
+      background-image: url("../image/pictos/arrow-right-white.svg"); }
   .btn:after, input[type="submit"]:after {
     content: '';
-    background-image: url("../img/pictos/arrow-right-black.svg");
+    background-image: url("../image/pictos/arrow-right-black.svg");
     display: flex;
     width: 8px;
     height: 10px;
@@ -2437,7 +2437,7 @@ header {
     header .nav-container .toggle-navbar {
       z-index: 1;
       display: none;
-      background-image: url("../img/pictos/bars-solid.svg");
+      background-image: url("../image/pictos/bars-solid.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 20px;
@@ -2445,7 +2445,7 @@ header {
       margin-left: auto;
       cursor: pointer; }
       header .nav-container .toggle-navbar.toggle {
-        background-image: url("../img/pictos/times-solid.svg"); }
+        background-image: url("../image/pictos/times-solid.svg"); }
 
 @media screen and (max-width: 880px) {
   header .nav-container .navbar {

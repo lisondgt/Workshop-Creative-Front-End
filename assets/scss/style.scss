@@ -62,7 +62,7 @@ body {
 
     &:after {
       content: '';
-      background-image: url("../img/pictos/arrow.svg");
+      background-image: url("../image/pictos/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 42px;
@@ -84,7 +84,7 @@ body {
 
     &:after {
       content: '';
-      background-image: url("../img/pictos/arrow.svg");
+      background-image: url("../image/pictos/arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 42px;
@@ -210,7 +210,7 @@ h4, .h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../img/pictos/panier.svg");
+  background-image: url("../image/pictos/panier.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 18px;
@@ -288,13 +288,13 @@ button:focus {
     background-position: left bottom;
 
     &:after {
-      background-image: url("../img/pictos/arrow-right-white.svg");
+      background-image: url("../image/pictos/arrow-right-white.svg");
     }
   }
 
   &:after {
     content: '';
-    background-image: url("../img/pictos/arrow-right-black.svg");
+    background-image: url("../image/pictos/arrow-right-black.svg");
     display: flex;
     width: 8px;
     height: 10px;
@@ -389,7 +389,7 @@ header {
     .toggle-navbar {
       z-index: 1;
       display: none;
-      background-image: url("../img/pictos/bars-solid.svg");
+      background-image: url("../image/pictos/bars-solid.svg");
       background-size: contain;
       background-repeat: no-repeat;
       width: 20px;
@@ -398,7 +398,7 @@ header {
       cursor: pointer;
 
       &.toggle {
-        background-image: url("../img/pictos/times-solid.svg");
+        background-image: url("../image/pictos/times-solid.svg");
       }
     }
   }
