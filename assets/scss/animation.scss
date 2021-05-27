@@ -21,8 +21,11 @@
   }
 }
 
+/* SECTIONS -------------------------------------------------*/
 .section-animate {
   overflow: hidden;
+
+  // ornerment first animation
   .ornement-animation {
     overflow: hidden;
     img {
@@ -30,6 +33,8 @@
       transition: all .5s ease-out;
     }
   }
+
+  // title second animation
   .title-animation {
     position: relative;
     overflow: hidden;
@@ -38,22 +43,28 @@
       transition: all 1s ease-out .4s;
     }
   }
+
+  // text third animation
   .text-animation {
     opacity: 0;
     transition: all 0.7s ease-out 1s;
   }
+
+  // image forth animation
   .img-animation {
     position: relative;
     &:before {
       position: absolute;
       content: '';
       background-color: #2C2C2C;
-      width: calc(100% - 40px);
+      width: 100%;
       height: 100%;
       opacity: 1;
       transition: all 0.7s ease-out 1.3s;
     }
   }
+
+  // slider forth animation
   .slider-animation {
     .sous-container-slider {
       transform: translate(100%, 0);
@@ -64,6 +75,8 @@
       }
     }
   }
+
+  // schema animation
   .schema-animation {
     img.schema {
       transform: translate(0, -110%);
@@ -94,41 +107,64 @@
       }
     }
   }
+
+  // column animation
   .col-animation {
     .block-container {
       &.block-1 {
         transition: all 1s ease-out;
         transform: translate(0, -120%);
+        @media screen and (max-width: 992px) {
+          transform: translate(100%, 0);
+        }
       }
       &.block-2 {
         transition: all 1s ease-out 1s;
         transform: translate(0, -143%);
+        @media screen and (max-width: 992px) {
+          transform: translate(-100%, 0);
+        }
       }
       &.block-3 {
         transition: all 1s ease-out 2s;
         transform: translate(0, -158%);
+        @media screen and (max-width: 992px) {
+          transform: translate(100%, 0);
+        }
       }
     }
   }
+
+  // elements animated
   &.animated {
+
+    // ornement animated
     .ornement-animation {
       img {
         transform: translate(0);
       }
     }
+
+    // title animated
     .title-animation {
       h2 {
         transform: translate(0);
       }
     }
+
+    // text animated
     .text-animation {
       opacity: 1;
     }
+
+    //image animated
     .img-animation {
       &:before {
         opacity: 0;
       }
     }
+
+    // slider animated
     .slider-animation {
       .sous-container-slider {
         transform: translate(0);
@@ -137,6 +173,8 @@
         }
       }
     }
+
+    // schema animated
     .schema-animation {
       img.schema {
         transform: translate(0);
@@ -145,6 +183,8 @@
         opacity: 1;
       }
     }
+
+    //column animated
     .col-animation {
       .block-container {
         transform: translate(0);

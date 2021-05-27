@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<!-- HEADER - MAIN NAVIGATION -->
 <header>
     <div class="large-container">
         <div class="nav-container">
@@ -20,14 +22,14 @@
 
             <div class="navbar">
                 <nav class="nav nav-left">
-                    <a class="nav-link" href="#prestations">Prestations</a>
-                    <a class="nav-link" href="#services">Services</a>
-                    <a class="nav-link" href="#accessoires">Accessoires</a>
+                    <a class="nav-link anchor-link" href="#prestations">Prestations</a>
+                    <a class="nav-link anchor-link" href="#services">Services</a>
+                    <a class="nav-link anchor-link" href="#accessoires">Accessoires</a>
                 </nav>
                 <nav class="nav nav-right">
-                    <a class="nav-link" href="#">Rechercher</a>
-                    <a class="nav-link" href="#">Profil</a>
-                    <a class="nav-link link-panier" href="#"><span class="icon-panier me-2"></span> Panier</a>
+                    <a class="nav-link anchor-link" href="#">Rechercher</a>
+                    <a class="nav-link anchor-link" href="#">Profil</a>
+                    <a class="nav-link link-panier anchor-link" href="#"><span class="icon-panier me-2"></span> Panier</a>
                 </nav>
             </div>
 
@@ -36,17 +38,19 @@
     </div>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero large-container">
     <div class="container-animation">
         <img src="assets/image/photos/header.jpg" alt="barbier" class="img-header"/>
         <div class="text-container">
             <img src="assets/image/logo/logo-JWS-white.svg" alt="logo JWS"/>
             <h1>Le professionnalisme au quotidien</h1>
-            <a href="#introduction" class="scroll-down">scroll down</a>
+            <a href="#introduction" class="scroll-down anchor-link">scroll down</a>
         </div>
     </div>
 </section>
 
+<!-- INTRODUCTION SECTION -->
 <section id="introduction" class="introduction anchor section-animate">
     <div class="ornement-left ornement-animation">
         <img src="assets/image/elements/intro-ornement.svg">
@@ -83,11 +87,14 @@
             </div>
         </div>
     </div>
-    <div class="large-container image-container img-animation">
-        <img src="assets/image/photos/tout-pour-la-barbe.jpg"/>
+    <div class="large-container image-container">
+        <div class="img-animation">
+            <img src="assets/image/photos/tout-pour-la-barbe.jpg"/>
+        </div>
     </div>
 </section>
 
+<!-- PRODUITS SECTION -->
 <section id="prestations" class="produits anchor section-animate">
     <div class="ornement-right ornement-animation">
         <img src="assets/image/elements/main-product-ornement.svg">
@@ -114,6 +121,7 @@
         </div>
     </div>
 
+    <!-- slider -->
     <div class="container-slick-slider slider-animation">
         <div class="sous-container-slider">
             <div class="slick-left"></div>
@@ -178,6 +186,7 @@
     </div>
 </section>
 
+<!-- TOUT COMPRIS SECTION -->
 <section id="services" class="tout-compris anchor section-animate">
     <div class="ornement-left ornement-animation">
         <img src="assets/image/elements/secondary-product-ornement.svg">
@@ -218,6 +227,7 @@
     </div>
 </section>
 
+<!-- LE MEILLEUR SECTION -->
 <section id="accessoires" class="le-meilleur anchor section-animate">
     <div class="ornement-right">
         <img src="assets/image/elements/le-meilleur.svg">
@@ -263,6 +273,7 @@
     </div>
 </section>
 
+<!-- MAP SECTION -->
 <section class="map section-animate">
     <div class="ornement-left ornement-animation">
         <img src="assets/image/elements/store-locator-ornement.svg">
@@ -270,7 +281,9 @@
     <div class="large-container">
         <div class="row align-items-center">
             <div class="col-sm-12 col-md-6">
-                <img src="assets/image/photos/carte.jpg" class="carte" alt="carte">
+                <div class="img-animation">
+                    <img src="assets/image/photos/carte.jpg" class="carte" alt="carte">
+                </div>
             </div>
             <div class="col-sm-12 col-md-6 mt-5 mt-md-0">
                 <div class="title-animation">
@@ -291,6 +304,7 @@
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <div class="large-container">
         <div class="flex-row">

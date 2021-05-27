@@ -2,8 +2,10 @@
 /* VARIABLES */
 /* TYPOGRAPHY */
 @font-face {
-  font-family: 'Alavaro';
-  src: url("../fonts/Alvaro/AlvaroCondensed-8XZZ.otf") format("opentype"); }
+  font-family: 'Alvaro';
+  src: url("../fonts/Alvaro/AlvaroCondensed-8XZZ.otf");
+  font-style: normal;
+  font-weight: 400; }
 
 @font-face {
   font-family: 'Oxygen';
@@ -2053,6 +2055,7 @@
 .hero:hover .container-animation h1 {
   transform: scale(0.9); }
 
+/* SECTIONS -------------------------------------------------*/
 .section-animate {
   overflow: hidden; }
   .section-animate .ornement-animation {
@@ -2075,7 +2078,7 @@
       position: absolute;
       content: '';
       background-color: #2C2C2C;
-      width: calc(100% - 40px);
+      width: 100%;
       height: 100%;
       opacity: 1;
       transition: all 0.7s ease-out 1.3s; }
@@ -2107,12 +2110,21 @@
   .section-animate .col-animation .block-container.block-1 {
     transition: all 1s ease-out;
     transform: translate(0, -120%); }
+    @media screen and (max-width: 992px) {
+      .section-animate .col-animation .block-container.block-1 {
+        transform: translate(100%, 0); } }
   .section-animate .col-animation .block-container.block-2 {
     transition: all 1s ease-out 1s;
     transform: translate(0, -143%); }
+    @media screen and (max-width: 992px) {
+      .section-animate .col-animation .block-container.block-2 {
+        transform: translate(-100%, 0); } }
   .section-animate .col-animation .block-container.block-3 {
     transition: all 1s ease-out 2s;
     transform: translate(0, -158%); }
+    @media screen and (max-width: 992px) {
+      .section-animate .col-animation .block-container.block-3 {
+        transform: translate(100%, 0); } }
   .section-animate.animated .ornement-animation img {
     transform: translate(0); }
   .section-animate.animated .title-animation h2 {

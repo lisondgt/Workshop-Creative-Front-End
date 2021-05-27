@@ -6,11 +6,33 @@
             $('.navbar').toggleClass("open");
             $('body').toggleClass('overflow-hidden');
         });
+        $("header nav a").click(function () {
+            $(".toggle-navbar").removeClass("toggle");
+            $('.navbar').removeClass("open");
+            $('body').removeClass('overflow-hidden');
+        });
         if ($(window).width() >= 880) {
             $('.toggle-navbar').removeClass("toggle");
             $('.navbar').removeClass("open");
             $('body').removeClass('overflow-hidden');
         }
+    }
+
+    function scrollSmooth() {
+        $("a.anchor-link").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
     }
 
     function slickSlider() {
@@ -53,9 +75,6 @@
                         arrows: false,
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         });
     }
@@ -78,12 +97,12 @@
 
     };
 
-    // Hook doAnimations on scroll, and trigger a scroll
     $(window).on('scroll', doAnimations);
     $(window).trigger('scroll');
 
     $(document).ready(function () {
         responsiveNav();
+        scrollSmooth();
         slickSlider();
 
     });

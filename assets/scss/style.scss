@@ -2,18 +2,23 @@
 @import "import";
 
 /* GENERAL -------------------------------------------------*/
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
-  font-family: 'Oxygen';
+  font-family: $font-oxygen;
   color: $primary-shade;
   font-size: $font-size-base;
   background-color: $secondary-shade;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* UTILS -------------------------------------------------*/
+.large-container {
+  padding: 0 20px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .ornement-left {
@@ -38,15 +43,6 @@ body {
   @media screen and (max-width: 992px) {
     display: none;
   }
-}
-
-/* UTILS -------------------------------------------------*/
-.large-container {
-  padding: 0 20px;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 /* SLICK SLIDER -------------------------------------------------*/
@@ -173,33 +169,33 @@ h1, h2, h3, h4, h5,
 }
 
 h1, .h1 {
-  font-family: 'Alvaro';
+  font-family: $font-alvaro;
   font-size: $h1-font-size-h1;
-  font-weight: normal;
+  font-weight: $font-regular;
   text-transform: uppercase;
 }
 
 h2, .h2 {
-  font-family: 'Alvaro';
+  font-family: $font-alvaro;
   font-size: $h2-font-size-h2;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: $font-regular;
 }
 
 h3, .h3 {
-  font-family: 'Oxygen';
+  font-family: $font-oxygen;
   font-size: $h3-font-size-h3;
   font-weight: 700;
 }
 
 h4, .h4 {
-  font-family: 'Alvaro';
+  font-family: $font-alvaro;
   font-size: $h4-font-size-h4;
-  font-weight: normal;
+  font-weight: $font-regular;
 }
 
 .subtitle-h1 {
-  font-family: 'Alvaro';
+  font-family: $font-alvaro;
   font-size: $h3-font-size-h3;
   font-weight: 700;
 }
@@ -240,7 +236,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 /* BOUTONS -------------------------------------------------*/
 button, [type="button"], [type="reset"], [type="submit"] {
-  font-family: 'Oxygen';
+  font-family: $font-oxygen;
   border: 1px solid $primary-shade;
   color: $primary-shade;
   background-color: transparent;
@@ -253,17 +249,17 @@ button:focus {
 
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
-  font-family: 'Oxygen';
+  font-family: $font-oxygen;
   border: 1px solid $primary-shade;
   color: $primary-shade;
   background-color: transparent;
 }
 
 .btn, input[type="submit"] {
-  font-family: 'Oxygen';
+  font-family: $font-oxygen;
   display: flex;
   align-items: baseline;
-  width: fit-content;
+  width: max-content;
   font-weight: 400;
   line-height: 1.5;
   color: $primary-shade;
