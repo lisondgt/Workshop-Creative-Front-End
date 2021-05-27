@@ -453,6 +453,7 @@ header {
 /* HERO -------------------------------------------------*/
 .hero {
   position: relative;
+  margin-bottom: 80px;
 
   .img-header {
     width: 100%;
@@ -509,12 +510,21 @@ header {
       background-color: $secondary-shade;
     }
   }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 85px;
+    background-color: $primary-shade;
+  }
 }
 
 /* INTRODUCTION -------------------------------------------------*/
 .introduction {
   position: relative;
-  margin-top: 80px;
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
   padding-bottom: 3rem;
@@ -523,17 +533,6 @@ header {
   @media screen and (max-width: 992px) {
     min-height: auto;
     height: auto;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -85px;
-    transform: translate(-50%, 0);
-    width: 1px;
-    height: 85px;
-    background-color: $primary-shade;
   }
 
   .text-container {

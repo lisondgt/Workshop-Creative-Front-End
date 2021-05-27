@@ -2491,7 +2491,8 @@ header {
 
 /* HERO -------------------------------------------------*/
 .hero {
-  position: relative; }
+  position: relative;
+  margin-bottom: 80px; }
   .hero .img-header {
     width: 100%; }
     @media screen and (max-width: 800px) {
@@ -2534,11 +2535,19 @@ header {
       width: 1px;
       height: 3rem;
       background-color: #FFFDFB; }
+  .hero:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%, 0);
+    width: 1px;
+    height: 85px;
+    background-color: #2C2C2C; }
 
 /* INTRODUCTION -------------------------------------------------*/
 .introduction {
   position: relative;
-  margin-top: 80px;
   border-top: 1px solid #2C2C2C;
   padding-top: 4rem;
   padding-bottom: 3rem;
@@ -2547,15 +2556,6 @@ header {
     .introduction {
       min-height: auto;
       height: auto; } }
-  .introduction:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: -85px;
-    transform: translate(-50%, 0);
-    width: 1px;
-    height: 85px;
-    background-color: #2C2C2C; }
   .introduction .text-container {
     margin-left: 300px; }
     @media screen and (max-width: 992px) {
