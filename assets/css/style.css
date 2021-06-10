@@ -69,8 +69,8 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) / 2);
-  padding-left: calc(var(--bs-gutter-x) / 2);
+  padding-right: 20px;
+  padding-left: 20px;
   margin-top: var(--bs-gutter-y); }
 
 .col {
@@ -2062,16 +2062,16 @@
     overflow: hidden; }
     .section-animate .ornement-animation img {
       transform: translate(0, 100%);
-      transition: all .5s ease-out; }
+      transition: all 1s ease-out .2s; }
   .section-animate .title-animation {
     position: relative;
     overflow: hidden; }
     .section-animate .title-animation h2 {
-      transform: translate(0, 100%);
-      transition: all 1s ease-out .4s; }
+      transform: translate(0, 130%);
+      transition: all 1s ease-out .8s; }
   .section-animate .text-animation {
     opacity: 0;
-    transition: all 0.7s ease-out 1s; }
+    transition: all 0.7s ease-out 1.4s; }
   .section-animate .img-animation {
     position: relative; }
     .section-animate .img-animation:before {
@@ -2081,32 +2081,32 @@
       width: 100%;
       height: 100%;
       opacity: 1;
-      transition: all 0.7s ease-out 1.3s; }
+      transition: all 0.7s ease-out 1.6s; }
   .section-animate .slider-animation .sous-container-slider {
     transform: translate(100%, 0);
-    transition: all .5s ease-out 1.3s; }
+    transition: all 1s ease-out 1.6s; }
     .section-animate .slider-animation .sous-container-slider .slick-dots {
       opacity: 0;
-      transition: all .5s ease-out 2s; }
+      transition: all .8s ease-out 3s; }
   .section-animate .schema-animation img.schema {
     transform: translate(0, -110%);
-    transition: all .5s ease-out; }
+    transition: all 1s ease-out 1.6s; }
   .section-animate .schema-animation .legend {
     opacity: 0; }
     .section-animate .schema-animation .legend.nez {
-      transition: all .5s ease-out 1.2s; }
+      transition: all .5s ease-out 2.6s; }
     .section-animate .schema-animation .legend.dos {
-      transition: all .5s ease-out 1.4s; }
-    .section-animate .schema-animation .legend.talon {
-      transition: all .5s ease-out 1.8s; }
-    .section-animate .schema-animation .legend.pivot {
-      transition: all .5s ease-out 2.2s; }
-    .section-animate .schema-animation .legend.crochet {
-      transition: all .5s ease-out 2.4s; }
-    .section-animate .schema-animation .legend.clou-de-fixation {
       transition: all .5s ease-out 2.8s; }
-    .section-animate .schema-animation .legend.manche {
+    .section-animate .schema-animation .legend.talon {
+      transition: all .5s ease-out 3s; }
+    .section-animate .schema-animation .legend.pivot {
       transition: all .5s ease-out 3.2s; }
+    .section-animate .schema-animation .legend.crochet {
+      transition: all .5s ease-out 3.4s; }
+    .section-animate .schema-animation .legend.clou-de-fixation {
+      transition: all .5s ease-out 3.8s; }
+    .section-animate .schema-animation .legend.manche {
+      transition: all .5s ease-out 4.2s; }
   .section-animate .col-animation .block-container.block-1 {
     transition: all 1s ease-out;
     transform: translate(0, -120%); }
@@ -2156,7 +2156,10 @@ body {
 
 /* UTILS -------------------------------------------------*/
 .large-container {
-  padding: 0 20px; }
+  padding: 0 40px; }
+  @media screen and (max-width: 992px) {
+    .large-container {
+      padding: 0 20px; } }
 
 .overflow-hidden {
   overflow: hidden; }
@@ -2335,7 +2338,8 @@ button, [type="button"], [type="reset"], [type="submit"] {
   font-family: "Oxygen";
   border: 1px solid #2C2C2C;
   color: #2C2C2C;
-  background-color: transparent; }
+  background-color: transparent;
+  padding: 1rem 1.5rem; }
 
 button:focus {
   outline: none !important;
@@ -2364,7 +2368,7 @@ button:focus {
   -moz-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 1rem 1.5rem;
   font-size: 16px;
   background: linear-gradient(to right, #2C2C2C 50%, #FFFDFB 50%);
   background-size: 200% 100%;
@@ -2396,7 +2400,7 @@ button:focus {
 
 /* HEADER -------------------------------------------------*/
 header {
-  padding: 1rem 0; }
+  padding: 2rem 0; }
   header .nav-container {
     position: relative;
     display: flex;
@@ -2411,33 +2415,40 @@ header {
     header .nav-container .nav {
       display: flex;
       flex-wrap: wrap; }
-      header .nav-container .nav .nav-link {
-        position: relative;
-        display: block;
-        padding: .5rem 1rem;
-        color: #2C2C2C;
-        font-size: 20px;
-        text-decoration: none;
-        transition: all .15s ease-in-out; }
-        header .nav-container .nav .nav-link:after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
+      header .nav-container .nav .nav-item {
+        list-style: none;
+        padding: 0 1rem; }
+        header .nav-container .nav .nav-item:first-of-type {
+          padding-left: 0; }
+        header .nav-container .nav .nav-item:last-of-type {
+          padding-right: 0; }
+        header .nav-container .nav .nav-item .nav-link {
+          position: relative;
           display: block;
-          height: 2px;
-          left: 0;
-          position: absolute;
-          background: #2C2C2C;
-          transition: width .5s ease 0s, right .15s ease 0s;
-          width: 0; }
-        header .nav-container .nav .nav-link.link-panier {
-          display: flex;
-          align-items: center; }
-        header .nav-container .nav .nav-link:hover {
-          font-weight: 400; }
-          header .nav-container .nav .nav-link:hover:after {
-            width: 100%;
-            left: 0; }
+          padding: .5rem 1rem;
+          color: #2C2C2C;
+          font-size: 20px;
+          text-decoration: none;
+          transition: all .15s ease-in-out; }
+          header .nav-container .nav .nav-item .nav-link:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 0;
+            position: absolute;
+            background: #2C2C2C;
+            transition: width .5s ease 0s, right .15s ease 0s;
+            width: 0; }
+          header .nav-container .nav .nav-item .nav-link.link-panier {
+            display: flex;
+            align-items: center; }
+          header .nav-container .nav .nav-item .nav-link:hover {
+            font-weight: 400; }
+            header .nav-container .nav .nav-item .nav-link:hover:after {
+              width: 100%;
+              left: 0; }
     header .nav-container .navbar-brand {
       position: absolute;
       left: 50%;
@@ -2456,7 +2467,7 @@ header {
       header .nav-container .toggle-navbar.toggle {
         background-image: url("../image/pictos/times-solid.svg"); }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1080px) {
   header .nav-container .navbar {
     position: fixed;
     background: #2C2C2C;
@@ -2494,7 +2505,8 @@ header {
   position: relative;
   margin-bottom: 80px; }
   .hero .img-header {
-    width: 100%; }
+    width: 100%;
+    transform: scale(1.01); }
     @media screen and (max-width: 800px) {
       .hero .img-header {
         min-height: 400px;
@@ -2542,7 +2554,7 @@ header {
     bottom: -80px;
     transform: translate(-50%, 0);
     width: 1px;
-    height: 85px;
+    height: 80px;
     background-color: #2C2C2C; }
 
 /* INTRODUCTION -------------------------------------------------*/
@@ -2911,7 +2923,7 @@ header {
   border-top: 1px solid #2C2C2C;
   padding-top: 4rem;
   padding-bottom: 3rem;
-  min-height: calc(613px - 4rem); }
+  min-height: calc(561px - 4rem); }
   @media screen and (max-width: 992px) {
     .le-meilleur {
       min-height: auto;
@@ -2977,12 +2989,14 @@ footer {
   footer .flex-row {
     display: flex; }
     footer .flex-row .col-flex {
-      flex: 0 0 20%; }
+      flex: 0 0 25%; }
       footer .flex-row .col-flex.col-logo {
-        flex: 0 0 30%;
+        flex: 0 0 20%;
         margin-right: auto; }
     footer .flex-row h3 {
       color: black; }
+    footer .flex-row h4 {
+      letter-spacing: 0.3em; }
     footer .flex-row ul {
       list-style: none;
       padding: 0; }

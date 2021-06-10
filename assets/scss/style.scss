@@ -14,7 +14,10 @@ body {
 
 /* UTILS -------------------------------------------------*/
 .large-container {
-  padding: 0 20px;
+  padding: 0 40px;
+  @media screen and (max-width: 992px) {
+    padding: 0 20px;
+  }
 }
 
 .overflow-hidden {
@@ -240,6 +243,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   border: 1px solid $primary-shade;
   color: $primary-shade;
   background-color: transparent;
+  padding: 1rem 1.5rem;
 }
 
 button:focus {
@@ -271,7 +275,7 @@ button:focus {
   -moz-user-select: none;
   user-select: none;
   border: 1px solid transparent;
-  padding: .375rem .75rem;
+  padding: 1rem 1.5rem;
   font-size: 16px;
   background: linear-gradient(to right, $primary-shade 50%, $secondary-shade 50%);
   background-size: 200% 100%;
@@ -317,7 +321,7 @@ button:focus {
 
 /* HEADER -------------------------------------------------*/
 header {
-  padding: 1rem 0;
+  padding: 2rem 0;
 
   .nav-container {
     position: relative;
@@ -337,41 +341,55 @@ header {
       display: flex;
       flex-wrap: wrap;
 
-      .nav-link {
-        position: relative;
-        display: block;
-        padding: .5rem 1rem;
-        color: $primary-shade;
-        font-size: 20px;
-        text-decoration: none;
-        transition: all .15s ease-in-out;
+      .nav-item {
+        list-style: none;
+        padding: 0 1rem;
 
-        &:after {
-          background: none repeat scroll 0 0 transparent;
-          bottom: 0;
-          content: "";
+        &:first-of-type {
+          padding-left: 0;
+        }
+
+        &:last-of-type {
+          padding-right: 0;
+        }
+
+        .nav-link {
+          position: relative;
           display: block;
-          height: 2px;
-          left: 0;
-          position: absolute;
-          background: $primary-shade;
-          transition: width .5s ease 0s, right .15s ease 0s;
-          width: 0;
-        }
-
-        &.link-panier {
-          display: flex;
-          align-items: center;
-        }
-
-        &:hover {
-          font-weight: $font-regular;
+          padding: .5rem 1rem;
+          color: $primary-shade;
+          font-size: 20px;
+          text-decoration: none;
+          transition: all .15s ease-in-out;
 
           &:after {
-            width: 100%;
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
             left: 0;
+            position: absolute;
+            background: $primary-shade;
+            transition: width .5s ease 0s, right .15s ease 0s;
+            width: 0;
+          }
+
+          &.link-panier {
+            display: flex;
+            align-items: center;
+          }
+
+          &:hover {
+            font-weight: $font-regular;
+
+            &:after {
+              width: 100%;
+              left: 0;
+            }
           }
         }
+
       }
     }
 
@@ -400,7 +418,7 @@ header {
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1080px) {
   header {
 
     .nav-container {
@@ -457,6 +475,7 @@ header {
 
   .img-header {
     width: 100%;
+    transform: scale(1.01);
     @media screen and (max-width: 800px) {
       min-height: 400px;
       object-fit: cover;
@@ -517,7 +536,7 @@ header {
     bottom: -80px;
     transform: translate(-50%, 0);
     width: 1px;
-    height: 85px;
+    height: 80px;
     background-color: $primary-shade;
   }
 }
@@ -975,7 +994,7 @@ header {
   border-top: 1px solid $primary-shade;
   padding-top: 4rem;
   padding-bottom: 3rem;
-  min-height: calc(613px - 4rem);
+  min-height: calc(561px - 4rem);
   @media screen and (max-width: 992px) {
     min-height: auto;
     height: auto;
@@ -1074,16 +1093,20 @@ footer {
     display: flex;
 
     .col-flex {
-      flex: 0 0 20%;
+      flex: 0 0 25%;
 
       &.col-logo {
-        flex: 0 0 30%;
+        flex: 0 0 20%;
         margin-right: auto;
       }
     }
 
     h3 {
       color: black;
+    }
+
+    h4 {
+      letter-spacing: 0.3em;
     }
 
     ul {
